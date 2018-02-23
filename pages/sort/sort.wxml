@@ -1,0 +1,61 @@
+<!--pages/sort/sort.wxml-->
+<import src="../tpls/products/products-tpl.wxml" />
+<import src="../tpls/sorts/sorts-tpl.wxml" />
+
+<view class="wrapper-content">
+
+
+  <block wx:for="{{bannerArr}}" wx:for-index="idx">
+    <view class="tags-box">
+      <!-- 增加一个判断 
+使用 wx:for-item 可以指定数组当前元素的变量名，
+
+使用 wx:for-index 可以指定数组当前下标的变量名：
+
+<view wx:for="{{[1, 2, 3, 4, 5, 6, 7, 8, 9]}}" wx:for-item="i">
+  <view wx:for="{{[1, 2, 3, 4, 5, 6, 7, 8, 9]}}" wx:for-item="j">
+    <view wx:if="{{i <= j}}">
+      {{i}} * {{j}} = {{i * j}}
+    </view>
+  </view>
+</view> -->
+
+     <view class="ibox-list-tags">
+     <!-- <text wx:if="{{idx == 0}}" class="ibox-title">{{item.banner_id}}</text>  </view>   -->
+ <view wx:if="{{idx == 0}}" class="ibox-title">   
+<text wx:if="{{item.banner_id== 1}}" class="ibox-title">张娜</text>  
+<text wx:if="{{item.banner_id== 2}}" class="ibox-title">老孙</text>  
+<text wx:if="{{item.banner_id== 3}}" class="ibox-title">小猪</text>  
+<text wx:if="{{item.banner_id== 4}}" class="ibox-title">2姐</text>  
+<text wx:if="{{item.banner_id== 5}}" class="ibox-title">大妈</text>  </view>
+</view>
+
+ <navigator class="ibox-list-nav"  url="../list/list?q={{item.key_word}}">
+      <view class="tag">
+        <text class="tag">{{item. bookname}}</text>
+                <!-- <text class="tag">{{item.key_word}}</text> -->
+      </view>
+ </navigator> 
+    </view>
+  </block>
+
+</view>
+
+
+<view class="wrapper-content">
+
+
+  <!-- <view class="tags-box">
+    <template is="sorts" data="{{sorts:bannerArr}}">
+    </template>
+  </view> -->
+
+  <!-- <scroll-view class="wrapper-scroll" scroll-y="true" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-top="100" style="margin-top: 156rpx;">
+
+
+    <import src="../tpls/item2/item2.wxml" />
+    <template is="item2" data="{{sorts: bannerArr}}" />
+
+  </scroll-view> -->
+
+</view>

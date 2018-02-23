@@ -1,0 +1,40 @@
+<!--pages/sort/sort.wxml-->
+<view class="wrapper-content">
+
+
+     <block wx:for="{{tagArr}}" wx:for-index="idx" wx:for-item="tgarr">  
+    <view class="tags-box">
+
+
+ <view class="ibox-list-tags">
+     <!-- <text wx:if="{{idx == 0}}" class="ibox-title">{{item.banner_id}}</text>  </view>   -->
+ <view wx:if="{{idx == 0}}" class="ibox-title">   
+<text wx:if="{{tgarr.title== 1}}" class="ibox-title">张娜</text>  
+<text wx:if="{{tgarr.title== 2}}" class="ibox-title">老孙</text>  
+<text wx:if="{{tgarr.title== 3}}" class="ibox-title">小猪</text>  
+<text wx:if="{{tgarr.title== 4}}" class="ibox-title">2姐</text>  
+<text wx:if="{{tgarr.title== 5}}" class="ibox-title">大妈</text>  </view>
+</view>
+
+
+
+        <text class="ibox-title">{{tgarr.title}}</text> 
+       <view class="list-container">
+     <view class="list-ui">  
+        <block wx:for="{{tgarr.tags}}" wx:for-index="index" wx:for-item="titem">
+        <navigator class="tags-nav"  url="../sort/sort?id={{titem}}">
+ <view wx:if="{{idx == 0}}" class="ibox-title">   
+<text wx:if="{{titem== 1}}" class="ibox-title">张娜</text>  
+<text wx:if="{{titem== 2}}" class="ibox-title">老孙</text>  
+<text wx:if="{{titem== 3}}" class="ibox-title">小猪</text>  
+<text wx:if="{{titem== 4}}" class="ibox-title">2姐</text>  
+<text wx:if="{{titem== 5}}" class="ibox-title">大妈</text>  </view>
+            <!-- <text class="tag">{{titem}}</text> -->
+        </navigator>
+        </block>
+         </view>
+  </view>
+    </view>
+    </block>
+    
+</view>

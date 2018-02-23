@@ -1,0 +1,11 @@
+
+<template name="sorts">
+  <block wx:for="{{sorts}}">
+
+        <text class="ibox-title">{{item.type}}</text>  
+  <image class="book-item-img" src="{{item.img}}"></image> 
+     <!-- <text wx:if="{{item.tags[0].title}}">{{item.tags[0].title}}</text> -->
+
+  </block>
+
+</template>
